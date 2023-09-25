@@ -1,0 +1,7 @@
+trdg
+Pillow==9.5.0
+"python-doctr[torch]"
+fastprogress>=0.1.21
+wandb>=0.10.31
+psutil>=5.9.0
+clearml>=1.11.1
