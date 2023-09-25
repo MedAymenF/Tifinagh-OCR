@@ -1,6 +1,7 @@
 trdg
 Pillow==9.5.0
 "python-doctr[torch]"
+huggingface_hub==0.13.4
 fastprogress>=0.1.21
 wandb>=0.10.31
 psutil>=5.9.0

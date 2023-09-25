@@ -18,4 +18,4 @@ Run summary:
 
 - val_loss 0.00391
 
-Checkout `doctr_recognition.ipynb` To use the model for inference.
+Check out [This notebook](doctr_recognition.ipynb) To use the model for inference.

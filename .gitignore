@@ -1,4 +1,8 @@
 # Training and validation data
 train/
 val/
+generated_train/
+generated_val/
 Tifinagh-MNIST/
+Tifinagh-MNIST-train/
+Tifinagh-MNIST-val/
