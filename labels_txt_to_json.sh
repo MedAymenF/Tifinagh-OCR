@@ -30,6 +30,8 @@ while read line; do
     filename=$(echo $line | cut -d' ' -f1)
     # Labels can contain spaces, so we need to get the rest of the line
     label=$(echo $line | cut -d' ' -f2-)
+    # Labels can contain double quotes, so we need to escape them
+    label=$(echo $label | sed 's/"/\\"/g')
     echo "    \"$filename\": \"$label\"," >> $2
 done < $1
 

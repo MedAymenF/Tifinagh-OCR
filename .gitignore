@@ -1,4 +1,6 @@
 # Training and validation data
+gen_train/
+gen_val/
 train/
 val/
 generated_train/
@@ -6,3 +8,6 @@ generated_val/
 Tifinagh-MNIST/
 Tifinagh-MNIST-train/
 Tifinagh-MNIST-val/
+
+# Weights & Biases
+wandb/

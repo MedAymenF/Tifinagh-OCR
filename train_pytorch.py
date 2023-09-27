@@ -37,8 +37,14 @@ from utils import plot_recorder, plot_samples
 
 
 # Add Tifinagh characters to VOCAB
-VOCABS['Tifinagh-IRCAM'] = "ⴰⴱⴳⴷⴹⴻⴼⴽⵀⵃⵄⵅⵇⵉⵊⵍⵎⵏⵓⵔⵕⵖⵙⵚⵛⵜⵟⵡⵢⵣⵥⵯ"
-VOCABS['tamazight'] = VOCABS["english"] + VOCABS['Tifinagh-IRCAM']
+tifinagh = ""
+for i in range(0x2D30, 0x2D67 + 1):
+    tifinagh += chr(i)
+tifinagh += chr(0x2D6F)
+tifinagh += chr(0x2D70)
+tifinagh += chr(0x2D7F)
+VOCABS['tifinagh'] = tifinagh
+VOCABS['tamazight'] = VOCABS["french"] + VOCABS['tifinagh']
 
 
 def record_lr(
