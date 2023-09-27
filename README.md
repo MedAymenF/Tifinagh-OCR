@@ -19,3 +19,6 @@ Run summary:
 - val_loss 0.00942
 
 Check out [This notebook](doctr_recognition.ipynb) To use the model for inference.
+
+## Hugging Face Space
+Check out the domo on Hugging Face [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/ayymen/Tifinagh-OCR).
