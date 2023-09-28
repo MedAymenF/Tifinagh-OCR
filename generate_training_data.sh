@@ -4,11 +4,11 @@
 # One word per line
 echo "Generating dictionary..."
 mkdir -p dict
-cat corpus/* | tr ' ' '\n' | sort | uniq > dict/corpus_dict.txt
+cat corpus/*/* | tr ' ' '\n' | sort | uniq > dict/corpus_dict.txt
 
 # Clean dictionary
 echo "Cleaning dictionary..."
-python clean_dict.py dict/corpus_dict.txt dict/corpus_dict_clean.txt
+python clean_dict.py dict/corpus_dict.txt dict/corpus_dict_clean.txt tamazight
 
 echo "Generating training data..."
 trdg -c 10000 -w 1 -t 2 -f 50 -k 2 -rk -bl 1 -rbl -tc '#000000,#888888' -na 2 -fd fonts/ -dt dict/corpus_dict_clean.txt --output_dir gen_train
@@ -25,9 +25,9 @@ mkdir -p gen_val/images; mv gen_val/*.jpg gen_val/images
 ./labels_txt_to_json.sh gen_val/labels.txt gen_val/labels.json; rm gen_val/labels.txt
 
 # Clone the Tifinagh-MNIST repo and convert it to the doctr format
-# echo "Converting Tifinagh-MNIST to doctr format..."
-# git clone https://github.com/iseddik/Tifinagh-MNIST
-# ./convert_tifinagh_mnist_to_doctr_format.sh Tifinagh-MNIST Tifinagh-MNIST-train Tifinagh-MNIST-val
+echo "Converting Tifinagh-MNIST to doctr format..."
+git clone https://github.com/iseddik/Tifinagh-MNIST
+./convert_tifinagh_mnist_to_doctr_format.sh Tifinagh-MNIST Tifinagh-MNIST-train Tifinagh-MNIST-val
 
 # Concatenate the datasets
 echo "Concatenating datasets..."

@@ -44,7 +44,9 @@ tifinagh += chr(0x2D6F)
 tifinagh += chr(0x2D70)
 tifinagh += chr(0x2D7F)
 VOCABS['tifinagh'] = tifinagh
+VOCABS['tifinagh-ircam'] = "ⴰⴱⴳⴷⴹⴻⴼⴽⵀⵃⵄⵅⵇⵉⵊⵍⵎⵏⵓⵔⵕⵖⵙⵚⵛⵜⵟⵡⵢⵣⵥⵯ"
 VOCABS['tamazight'] = VOCABS["french"] + VOCABS['tifinagh']
+VOCABS['zgh'] = VOCABS['french'] + VOCABS['tifinagh-ircam']
 
 
 def record_lr(
